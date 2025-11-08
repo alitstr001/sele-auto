@@ -2,10 +2,14 @@ package login;
 
 import base.BaseTest;
 import org.openqa.selenium.By;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import secureAreaMessage.SecureAreaMessageTest;
 
 public class LoginTest extends BaseTest {
+    private final Logger logger = LoggerFactory.getLogger(LoginTest.class);
     @Test(priority = 1)
     public void loginWithValidData() {
         driver.findElement(By.linkText("Form Authentication")).click();
